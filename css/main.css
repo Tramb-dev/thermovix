@@ -1,0 +1,675 @@
+/* CSS Document */
+/* main.css */
+
+@font-face {
+	font-family: "Open Sans";
+	font-weight: normal;
+	src: url(../font/OpenSans-Regular.ttf);
+}
+
+@font-face {
+	font-family: "Open Sans";
+	font-weight: bold;
+	src: url(../font/OpenSans-Bold.ttf);
+}
+
+@font-face {
+	font-family: "Open Sans";
+	font-weight: bold;
+	font-style: italic;
+	src: url(../font/OpenSans-BoldItalic.ttf);
+}
+
+@font-face {
+	font-family: "Open Sans";
+	font-weight: 600;
+	src: url(../font/OpenSans-Semibold.ttf);
+}
+
+@font-face {
+	font-family: "Open Sans";
+	font-weight: 600;
+	font-style: italic;
+	src: url(../font/OpenSans-SemiboldItalic.ttf);
+}
+
+@font-face {
+	font-family: "Open Sans";
+	font-style: italic;
+	src: url(../font/OpenSans-Italic.ttf);
+}
+
+@font-face {
+	font-family: "Open Sans";
+	font-weight: 900;
+	src: url(../font/OpenSans-ExtraBold.ttf);
+}
+
+@font-face {
+	font-family: "Open Sans";
+	font-weight: 100;
+	src: url(../font/OpenSans-Light.ttf);
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+div {
+	box-sizing: border-box;
+}
+
+header, nav, .contenu, .notes {
+	background-color: #FFF;
+}
+
+#container,  #container_gestion {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	padding-bottom: 30px;
+	overflow: hidden;
+	background: linear-gradient(to bottom, rgba(172,198,203,0.3) 0%,rgba(172,198,203,0.42) 34%,rgba(116,153,162,0.65) 100%);
+}
+
+.right {
+	float: right;
+}
+
+.clear {
+	float: none;
+}
+
+.cursor, input[type="submit"] {
+	cursor: pointer; 
+}
+
+.aide {
+	margin: 0 20px;
+}
+
+fieldset {
+	border: 2px solid #dcbe7b;
+	border-radius: 8px;
+	margin-bottom: 5px;
+}
+
+legend {
+	font-family: "Open Sans", Geneva, sans-serif;
+	font-style: italic;
+	font-weight: 600;
+	color: #4e7d88;
+}
+
+input[type="submit"] {
+	margin-left: 5px;
+}
+
+input[name="delete"], input[name="modif"] {
+	margin-top: 10px;
+}
+
+#outer {
+	margin: 0px auto 30px;
+	width: 100%;
+	height: 100%;
+}
+
+#wrapper {
+	width: 100%;
+	height: calc(100% - 40px);
+	min-width: 480px;
+	padding: 0 10px;
+	margin: 0px;
+}
+
+nav, section {
+	height: calc(100% - 25px);
+	margin: 0;
+}
+
+/*****************/
+/* Bloc header
+/*****************/
+header {
+	border-bottom: #000 medium;
+	box-shadow: 0px 1px 5px 0px #343434;
+	padding: 2px 20px 5px;
+	margin: 0 10px;
+	border-radius: 0 0 10px 10px;
+	height: 20px;
+}
+
+header a, header a:visited, .aide > a, .aide > a:visited, input[type="submit"], #addInter {
+	background: linear-gradient(to bottom, #fff3d7 0%,#dcbe7b 83%,#b39248 100%);
+	border-radius: 5px;
+	padding: 2px 5px;
+	color: black;
+	text-decoration: none;
+	font-family: "Open Sans", Geneva, sans-serif;
+	font-weight: 600;
+	font-size: 13px;
+}
+
+header a:hover, input[type="submit"]:hover {
+	box-shadow: 1px 3px 5px 0px #656565;
+}
+
+header a {
+	margin-right: 3px;
+}
+
+/*****************/
+/* Fin bloc header
+/*****************/
+#caption {
+	text-align: center;
+	text-transform: capitalize;
+	margin: 3px 0;
+	font-weight: 900;
+	font-family: "Open Sans", Geneva, sans-serif;
+}
+
+#gestionLivres {
+	margin: 5px 10px;
+}
+
+#gestionLivres > form {
+	margin-top: 10px;
+}
+
+/*****************/
+/* Bloc nav
+/*****************/
+nav {
+	box-shadow: 1px 3px 5px 0px #656565;
+	border-radius: 5px;
+	overflow-y: auto;
+	float: left;
+	margin-right: 15px;
+	min-width: 200px;
+	max-width: 220px;
+}
+
+nav > div {
+	padding: 10px 10px 0;
+}
+
+nav .titre {
+	border: 1px #000000;
+	border-style: solid none;
+	margin: 0 -10px 5px;
+	padding: 0 10px;
+	background: linear-gradient(to right, #b5d5dd 0%,#6e98a0 70%,#4e7d88 100%);
+	font-family: "Open Sans", Geneva, sans-serif;
+	font-style: italic;
+	font-weight: 600;
+}
+
+nav .gestion  {
+	margin-bottom: 2px;
+	padding: 0 10px;
+	background-color: rgba(172, 198, 203, 0.5);
+	border-radius: 5px;
+}
+
+nav .gestion:hover  {
+	background-color: #ACC6CB;
+}
+
+nav form > div {
+	margin-top: 5px;
+}
+
+#triAll, #triNone {
+	font-family: "Open Sans", Geneva, sans-serif;
+	font-style: italic;
+	font-size: 13px;
+	margin: 0 2px;
+}
+
+#listeGroupe {
+	margin-top: 10px;
+}
+
+#listeGroupe input[type="submit"] {
+	margin: 5px 0 20px;
+}
+
+#choixResume {
+	margin-bottom: 10px;
+}
+
+.cptGroupe {
+	color: #777;
+	font-size: 14px;
+}
+
+/*****************/
+/* Fin bloc nav
+/*****************/
+
+
+/*****************/
+/* Bloc section
+/*****************/
+section {
+	border-collapse: separate;
+	border-spacing: 10px;
+}
+
+.contenu, .notes {
+	display: inline-block;
+	vertical-align: top;
+	height: 100%;
+}
+
+.contenu {
+	overflow-y: auto;
+	margin-right: 10px;
+	width: calc(75% - 230px);
+}
+
+#tableContacts, #tableInterventions, #tableReception, #tableLogs {
+	width: 100%;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+
+#tableLogs {
+	margin-top: 10px;
+	background-color: white;
+}
+
+#tableContacts td:not(.selectContact), #tableContacts th, #tableInterventions td:not(.selectContact), #tableInterventions th, #tableReception td:not(.selectContact), #tableReception th, #tableLogs th, #tableLogs td {
+	border: 1px solid #999;
+	padding: 2px;
+}
+
+#tableContacts td:not(.contactGroupes), #tableInterventions, #tableLogs td{
+	font-family: "Open Sans";
+	font-size: small;
+	font-weight: 600;
+}
+
+#tableContacts th:first-child {
+	width: 17px;
+}
+
+thead tr {
+	background: #4e7d88;
+}
+
+thead tr th {
+	color: #FFF;
+	text-align: left;
+	font-family: "Open Sans", Geneva, sans-serif;
+	font-weight: 600;
+}
+
+tbody tr:nth-child(even) {
+	background-color: #dee9ec;
+}
+
+tbody tr:hover, tbody tr.selected {
+	background-color: #ACC6CB;
+}
+
+#tableInterventions tr.interTresProche {
+	background-color: #f02f03 !important;
+}
+
+#tableInterventions tr.interProche {
+	background-color: #fea38e !important;
+}
+
+#tableInterventions .bUrgence {
+	background-color: #5F9EA0;
+}
+
+#tableInterventions .hUrgence {
+	background-color: #FFA500;
+}
+
+#tableInterventions .vhUrgence {
+	background-color: #FF0000;
+}
+
+#tableInterventions .interFinie {
+	color: #999;
+}
+
+.email {
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.email a {
+	color: #2e5d68;
+}
+
+.contactGroupes span {
+	margin-right: 3px;
+	background-color: #4e7d88;
+	padding: 2px 3px;
+	font-size: 11px;
+	border-radius: 2px;
+	color: #FFF;
+	vertical-align: middle;
+	display: inline-block;
+}
+
+.notes {
+	border: solid 1px;
+	padding: 0 10px 10px 5px;
+	overflow-y: auto;
+	width: calc(25% - 20px);
+	font-family: "Open Sans";
+	font-size: small;
+}
+
+.notes .familleLivres {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.notes .familleLivres {
+	margin: 2px 5px;
+}
+
+.notes > div {
+	margin-bottom: 15px;
+}
+
+.notes > div.inter_finie {
+	color: #999;
+}
+
+#tabs {
+	margin-top: 0;
+}
+
+.choix  {
+	display: inline-block;
+	padding: 0 10px;
+	border: 1px solid black;
+	border-top: none;
+	border-radius: 0 0 5px 5px;
+}
+
+.choix:hover  {
+	background-color: #ACC6CB;
+}
+
+.inter_finie, .inter_non_finie {
+	margin-bottom: 10px;
+}
+
+#carte {
+	height: 100%;
+	width: calc(100% - 260px);
+	margin: 10px 0;
+}
+
+#carteSelectionGroupes {
+	float: right;
+	background-color: #fff;
+	padding: 0 5px 5px;
+	position: fixed;
+	top: 30px;
+	right: 30px;
+}
+
+#gestionLivres > p {
+	display: inline-block;
+	vertical-align: top;
+	margin: 5px 10px;
+}
+
+#gestionLivres .cursor:hover {
+	font-weight: bold;
+}
+
+#gestion form {
+	margin: 10px 0;
+}
+
+#modif_groupes, #delete_group {
+	display: inline-block;
+	vertical-align: top;
+}
+/*****************/
+/* Fin bloc section
+/*****************/
+
+
+
+/*****************/
+/* Bloc popup Contact
+/*****************/
+
+#popupContact form {
+	padding: 10px 5px;
+}
+
+.contactGroupe {
+	margin: 5px;
+	background-color: #dee9ec;
+	border-color: #dee9ec;
+	padding: 2px 3px;
+	font-size: 13px;
+}
+
+.blocContact, .blocNomContact {
+	display: inline-block;
+	vertical-align: top;
+	margin: 10px 5px;
+}
+
+.blocContact input:first-child,  .blocContact .postcode, .blocNomContact input {
+	color: #666;
+	font-size: 0.9em;
+}
+
+#popupContact .inputarea {
+	display: inline-block;
+	vertical-align: top;
+}
+
+#popupContact input[name="delete"] {
+	display: block;
+	position: absolute;
+	right: 20px;
+	bottom: 35px;
+}
+
+#popupContact  input[name="save"] {
+	display: block;
+	position: absolute;
+	right: 35px;
+	top: 3px;
+}
+
+#addInter {
+	display: block;
+	position: absolute;
+	right: 35px;
+	top: 35px;
+	cursor: pointer;
+}
+
+#modifGroupes {
+	border-radius: 5px;
+	color: #888;
+	font-family: "Open Sans", Geneva, sans-serif;
+	font-size: 11px;
+	padding: 2px 5px;
+	border: dotted 1px;
+}
+
+#modifGroupes:hover {
+	background-color: #444;
+	color: #aaa;
+}
+
+#resize {
+	width: 200px;
+	height: 150px;
+}
+
+#selectGroupes {
+	display: none;
+}
+
+.imgMini {
+	float: right;
+}
+
+.ligneAdresse, .ligneTel,  .ligneEmail {
+	margin: 2px 0;
+	padding: 2px 0;
+}
+
+.ligneAdresse:hover, .ligneTel:hover, .ligneEmail:hover, .blocNomContact:hover {
+	background-color: #bdd89e;
+}
+
+.blocContact input, .blocContact textarea,.blocNomContact input:not([type="checkbox"]) {
+	border: 1px solid #ddd;
+	margin: 1px;
+}
+
+.blocContact input:hover:not([type="checkbox"]), .blocContact input:focus:not([type="checkbox"]), .blocContact textarea:hover, .blocContact textarea:focus, .blocNomContact input:hover, .blocNomContact input:focus {
+	border: 1px solid #999;
+	margin: 0;
+}
+
+#ajoutAdresse, #ajoutTel, #ajoutEmail {
+	font-size: 10px;
+	color: #999;
+}
+
+.ligneAdresse div {
+	display: inline-block;
+}
+
+.livres > div {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.familleLivres {
+	border: solid 1px #999;
+	padding: 2px;
+}
+
+#popupContact .familleLivres:not(#tm31) {
+	margin: 0 0 5px;
+}
+
+.familleLivres > div {
+	font-family: "Open Sans", Geneva, sans-serif;
+	font-style: italic;
+	font-weight: 600;
+	color: #999;
+	font-size: 13px;
+}
+/*****************/
+/* Fin bloc popup Contact
+/*****************/
+
+/*****************/
+/* Bloc popup Intervention
+/*****************/
+#popupIntervention {
+	padding: 5px;
+}
+
+#popupIntervention > div:first-child {
+	border-bottom: 1px dashed;
+	margin-bottom: 10px;
+	padding-bottom: 5px;
+	font-family: "Open Sans", Geneva, sans-serif;
+	font-weight: 600;
+}
+
+#popupIntervention input, #popupIntervention select:first-child {
+	margin-bottom: 5px;
+}
+
+#popupIntervention .dataInter {
+	display: inline-block;
+	vertical-align: top;
+}
+
+#noteIntervention {
+	padding: 10px;
+}
+
+#noteIntervention span {
+	margin-right: 5px;
+	padding: 3px 5px 5px;
+	border-radius: 10px 10px 0 0;
+	border: 1px solid;
+}
+
+#noteIntervention span:not(.interSelected) {
+	color: #DDD;
+}
+
+.interSelected,  #noteIntervention span:hover {
+	background-color: #b5d5dd;
+	color: black;
+}
+
+.soumission {
+	display: inline-block;
+	vertical-align: bottom;
+	margin-left: 20px;
+}
+
+/*****************/
+/* Fin bloc popup Intervention
+/*****************/
+
+/*****************/
+/* Bloc footer
+/*****************/
+footer {
+	bottom: 0;
+	left: 0;
+	right: 0;
+	position: fixed;
+	box-shadow: 0px -1px 5px 0px #343434;
+	display: block;
+	background-color: #DCBE7B;
+	padding: 3px 10px;
+	height: 20px;
+}
+
+footer .message {
+	font-weight: bold;
+	font-size: 1.1em;
+	float: right;
+	color: #aa0000;
+}
+
+/*****************/
+/* Fin bloc footer
+/*****************/
+
+/* css for timepicker */
+.ui-timepicker-div .ui-widget-header { margin-bottom: 8px; }
+.ui-timepicker-div dl { text-align: left; }
+.ui-timepicker-div dl dt { float: left; clear:left; padding: 0 0 0 5px; }
+.ui-timepicker-div dl dd { margin: 0 10px 10px 45%; }
+.ui-timepicker-div td { font-size: 90%; }
+.ui-tpicker-grid-label { background: none; border: none; margin: 0; padding: 0; }
+
+.ui-timepicker-rtl{ direction: rtl; }
+.ui-timepicker-rtl dl { text-align: right; padding: 0 5px 0 0; }
+.ui-timepicker-rtl dl dt{ float: right; clear: right; }
+.ui-timepicker-rtl dl dd { margin: 0 45% 10px 10px; }
